@@ -98,17 +98,17 @@ header > .inner nav ul li:hover a {
   transform: translate(-50%, -50%);
   border-right: 3px solid;
   left: 50%;
+  font-family: Monaco;
 }
 .visual > .inner .name {
-  width: 10ch;
-  animation: typing 2s steps(10), blink .5s step-end;
+  animation: typingName 2s steps(9) forwards, blink .5s step-end forwards;
   top: 40%;
 }
 .visual > .inner .dev {
-  width: 21ch;
-  animation: typing 4s steps(21), blink .5s step-end;
+  animation: typingDev 4s steps(20) forwards, blink .5s;
   animation-delay: 2.2s;
   top: 60%;
+  opacity: 0;
 }
 
 
@@ -119,8 +119,14 @@ header > .inner nav ul li:hover a {
 
 
 /* Animation */
-@keyframes typing {
-  from { width: 0%; }
+@keyframes typingName {
+  from { width: 0; }
+  to { width: 9ch; }
+}
+
+@keyframes typingDev {
+  from { width: 0; opacity: 1; }
+  to { width: 20ch; opacity: 1; }
 }
 
 @keyframes blink {
