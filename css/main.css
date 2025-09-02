@@ -90,6 +90,7 @@ header > .inner nav ul li:hover a {
 
 /* VISUAL */
 .visual {
+  color: rgba(34, 34, 34, 0.8);
   margin-top: 50px;
   width: 100%;
 }
@@ -126,7 +127,7 @@ header > .inner nav ul li:hover a {
 
 /* ABOUT */
 .about .inner {
-  padding: 160px 20px 0;
+  padding: 160px 20px 150px;
 }
 
 .about .inner .title-container {
@@ -196,8 +197,7 @@ header > .inner nav ul li:hover a {
 
 /* SKILL */
 .skill .inner {
-  height: 2000px;
-  padding: 160px 20px 0;
+  padding: 160px 20px 500px;
 }
 .skill .inner h2::before {
   content: "";
@@ -240,6 +240,37 @@ header > .inner nav ul li:hover a {
   object-fit: contain;
 }
 
+
+/* CONTACT */
+.contact .inner {
+  height: 2000px;
+  padding: 160px 20px 0;
+}
+.contact .inner h2::before {
+  content: "";
+  display: block;
+  background-color: rgba(34, 34, 34, 0.3);
+  width: 230px;
+  height: 3px;
+}
+.contact .inner h2::after {
+  content: "";
+  display: block;
+  background-color: rgba(34, 34, 34, 0.3);
+  width: 230px;
+  height: 3px;
+}
+
+.contact .inner .git {
+  width: 50%;
+  height: 200px;
+  border: 2px solid rgba(34, 34, 34, 0.4);
+  border-radius: 20px;
+  margin: 0 auto;
+}
+.contact .inner .git:hover {
+  background-color: #ccdaf3;
+}
 
 /* Animation */
 @keyframes typingName {
