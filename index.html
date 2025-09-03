@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link rel="stylesheet" href="./css/main.css">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script defer src="./js/main.js"></script>
 </head>
 <body>
@@ -25,8 +26,7 @@
         <ul>
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#skill">SKILL</a></li>
-          <li><a href="#skill">PROJECT</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#project">PROJECT</a></li>
         </ul>
       </nav>
     </div>
@@ -41,7 +41,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="about">
+  <section id="about" class="about scroll-spy">
     <div class="inner">
       <div class="title-container">
         <h2 class="title font-en">
@@ -52,23 +52,30 @@
         <div class="about__img">
           <img src="./images/img_avatar.png" alt="프로필 이미지">
         </div>
-        <div class="about__info">
+        <div class="about__info font-en">
           <ul>
-            <li class="font-en">
+            <li>
               <span class="material-symbols-outlined">person</span>
               NAME
             </li>
-            <li class="font-en">LEE HYUNA</li>
+            <li>LEE HYUNA</li>
           </ul>
           <ul>
-            <li class="font-en">
+            <li>
               <span class="material-symbols-outlined">cake</span>
               BIRTH
             </li>
-            <li class="font-en">2003.01.21</li>
+            <li>2003.01.21</li>
+          </ul>
+          <ul >
+            <li>
+              <span class="material-symbols-outlined">school</span>
+              EDUCATION
+            </li>
+            <li>oo학교 oo과 졸업</li>
           </ul>
           <ul>
-            <li class="font-en">
+            <li>
               <span class="material-symbols-outlined">mail</span>
               EMAIL
             </li>
@@ -76,10 +83,10 @@
           </ul>
           <ul>
             <li class="font-en">
-              <span class="material-symbols-outlined">school</span>
-              EDUCATION
+              <span class="material-symbols-outlined">call</span>
+              PHONE
             </li>
-            <li class="font-en">oo학교 oo과 졸업</li>
+            <li>010.0000.0000</li>
           </ul>
         </div>
       </div>
@@ -110,11 +117,11 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
+  <!-- PROJECT -->
+  <section id="project" class="project">
     <div class="inner">
-      <h2 class="title">CONTACT</h2>
-      <div class="contact-container">
+      <h2 class="title">PROJECT</h2>
+      <div class="project-container">
         <div class="git">git</div>
       </div>
     </div>

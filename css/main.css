@@ -37,7 +37,7 @@ img {
   color: rgba(34, 34, 34, 0.8);
   font-size: 50px;
   font-weight: 800;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 
@@ -114,6 +114,7 @@ header > .inner nav ul li:hover a {
   font-family: "Noto Sans Mono", monospace;
 }
 .visual > .inner .name {
+  color: #4a6bd6;
   animation: typingName 2s steps(9) forwards, blink .5s step-end forwards;
   top: 40%;
 }
@@ -127,7 +128,7 @@ header > .inner nav ul li:hover a {
 
 /* ABOUT */
 .about .inner {
-  padding: 160px 20px 150px;
+  padding: 180px 20px 150px;
 }
 
 .about .inner .title-container {
@@ -139,14 +140,14 @@ header > .inner nav ul li:hover a {
   display: block;
   background-color: rgba(34, 34, 34, 0.3);
   width: 263px;
-  height: 3px;
+  height: 2px;
 }
 .about .inner h2::after {
   content: "";
   display: block;
   background-color: rgba(34, 34, 34, 0.3);
   width: 263px;
-  height: 3px;
+  height: 2px;
 }
 
 .about .about__wrapper {
@@ -168,6 +169,14 @@ header > .inner nav ul li:hover a {
 
 .about .about__info {
   width: 45%;
+  opacity: 0;
+  transform: translateX(200px);
+  transition: 2s;
+}
+
+.about.show .about__info {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .about .about__info ul {
@@ -193,25 +202,36 @@ header > .inner nav ul li:hover a {
   display: flex;
   justify-content: center;
 }
+.about .about__info ul {
+  transition: opacity 0.3s ease;
+}
+.about .about__info:hover ul {
+  opacity: 0.3;
+}
+.about .about__info ul:hover {
+  opacity: 1;
+  color: #4a6bd6;
+  transform: scale(1.1);
+}
 
 
 /* SKILL */
 .skill .inner {
-  padding: 160px 20px 500px;
+  padding: 180px 20px 500px;
 }
 .skill .inner h2::before {
   content: "";
   display: block;
   background-color: rgba(34, 34, 34, 0.3);
   width: 143px;
-  height: 3px;
+  height: 2px;
 }
 .skill .inner h2::after {
   content: "";
   display: block;
   background-color: rgba(34, 34, 34, 0.3);
   width: 143px;
-  height: 3px;
+  height: 2px;
 }
 
 .skill .skill-container {
@@ -241,35 +261,33 @@ header > .inner nav ul li:hover a {
 }
 
 
-/* CONTACT */
-.contact .inner {
+/* PROJECT */
+.project .inner {
   height: 2000px;
-  padding: 160px 20px 0;
+  padding: 180px 20px 0;
 }
-.contact .inner h2::before {
+.project .inner h2::before {
   content: "";
   display: block;
   background-color: rgba(34, 34, 34, 0.3);
   width: 230px;
-  height: 3px;
+  height: 2px;
 }
-.contact .inner h2::after {
+.project .inner h2::after {
   content: "";
   display: block;
   background-color: rgba(34, 34, 34, 0.3);
   width: 230px;
-  height: 3px;
+  height: 2px;
 }
 
-.contact .inner .git {
-  width: 50%;
+.project .inner .git {
+  width: 90%;
   height: 200px;
-  border: 2px solid rgba(34, 34, 34, 0.4);
+  box-shadow: 0px 0px 5px rgba(34, 34, 34, 0.4);
+  /* border: 2px solid rgba(34, 34, 34, 0.4); */
   border-radius: 20px;
   margin: 0 auto;
-}
-.contact .inner .git:hover {
-  background-color: #ccdaf3;
 }
 
 /* Animation */
