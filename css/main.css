@@ -217,7 +217,7 @@ header > .inner nav ul li:hover a {
 
 /* SKILL */
 .skill .inner {
-  padding: 180px 20px 500px;
+  padding: 180px 20px 100px;
 }
 .skill .inner h2::before {
   content: "";
@@ -235,6 +235,7 @@ header > .inner nav ul li:hover a {
 }
 
 .skill .skill-container {
+  margin-top: 130px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -243,18 +244,42 @@ header > .inner nav ul li:hover a {
 .skill .skill-container div {
   width: fit-content;
   background-color: #e5e7eb;
+  border: 3px solid #e5e7eb;
   border-radius: 15px;
-  transform: skewX(5deg);
+  transition: 0.8s;
+  cursor: pointer;
+}
+.skill .skill-container div:hover {
+  background-color: #ffffff;
+  border: 3px solid #e5e7eb;
 }
 
+.skill .skill-container div:nth-child(1),
+.skill .skill-container div:nth-child(3),
+.skill .skill-container div:nth-child(5) {
+  transform: skew(5deg) translateY(-150px);
+  opacity: 0;
+}
 .skill .skill-container div:nth-child(2),
 .skill .skill-container div:nth-child(4) {
-  transform: skewX(5deg) translateY(60px);
+  transform: skew(5deg) translateY(170px);
+  opacity: 0;
+}
+.skill.show .skill-container div:nth-child(1),
+.skill.show .skill-container div:nth-child(3),
+.skill.show .skill-container div:nth-child(5) {
+  transform: skew(5deg) translateY(-10px);
+  opacity: 1;
+}
+.skill.show .skill-container div:nth-child(2),
+.skill.show .skill-container div:nth-child(4) {
+  transform: skew(5deg) translateY(70px);
+  opacity: 1;
 }
 
 .skill .skill-container div img {
   padding: 10px;
-  transform: skewX(-5deg);
+  transform: skew(-5deg);
   width: 130px;
   height: 130px;
   object-fit: contain;
@@ -263,7 +288,6 @@ header > .inner nav ul li:hover a {
 
 /* PROJECT */
 .project .inner {
-  height: 2000px;
   padding: 180px 20px 0;
 }
 .project .inner h2::before {
@@ -287,7 +311,68 @@ header > .inner nav ul li:hover a {
   box-shadow: 0px 0px 5px rgba(34, 34, 34, 0.4);
   /* border: 2px solid rgba(34, 34, 34, 0.4); */
   border-radius: 20px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
+}
+
+/* MODAL */
+#modal, #imageModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  display: none
+}
+#modal.show {
+  display: flex;
+}
+
+#modal .modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  /* 고정 길이 */
+  /* width: 800px; */
+  /* 상대 길이 */
+  width: 60%;
+}
+
+#imageModal .modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+#modal .modal-header,
+#imageModal .modal-header {
+  padding: 16px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#modal .modal-header .btn-close,
+#imageModal .modal-header .btn-close {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#modal .modal-header .btn-close:hover,
+#imageModal .modal-header .btn-close:hover {
+  color: #aaa;
+}
+
+#modal .modal-body,
+#imageModal .modal-body {
+  padding: 16px;
 }
 
 /* Animation */
