@@ -53,6 +53,7 @@ header {
 header > .inner {
   width: 800px;
   background-color: #e5e7eb;
+  box-shadow: 0px 0px 5px rgba(34, 34, 34, 0.3);
   border-radius: 30px;
   display: flex;
   justify-content: space-between;
@@ -198,12 +199,12 @@ header > .inner nav ul li:hover a {
   margin-right:20px;
   padding: 6px 13px;
   border-radius: 18px;
-  background-color: #e5e7eb;
+  background-color: #cad5eb;
   display: flex;
   justify-content: center;
 }
 .about .about__info ul {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s;
 }
 .about .about__info:hover ul {
   opacity: 0.3;
@@ -243,8 +244,8 @@ header > .inner nav ul li:hover a {
 
 .skill .skill-container div {
   width: fit-content;
-  background-color: #e5e7eb;
-  border: 3px solid #e5e7eb;
+  background-color: #cad5eb;
+  border: 3px solid #cad5eb;
   border-radius: 15px;
   transition: 0.8s;
   cursor: pointer;
@@ -305,13 +306,24 @@ header > .inner nav ul li:hover a {
   height: 2px;
 }
 
-.project .inner .git {
-  width: 90%;
-  height: 200px;
+.project .inner .project-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project .inner .project-container .exam {
+  width: calc(100% - 40px);
+  min-height: 200px;
+  height: fit-content;
+  margin: 20px;
   box-shadow: 0px 0px 5px rgba(34, 34, 34, 0.4);
-  /* border: 2px solid rgba(34, 34, 34, 0.4); */
   border-radius: 20px;
   margin: 0 auto 50px;
+}
+
+.project .inner .project-container .exam img {
+  width: 100%;
+  padding: 20px;
 }
 
 /* MODAL */
@@ -324,7 +336,6 @@ header > .inner nav ul li:hover a {
   z-index: 99;
 
   background-color: rgba(0, 0, 0, 0.5);
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   display: none
@@ -336,9 +347,6 @@ header > .inner nav ul li:hover a {
 #modal .modal-content {
   background-color: #fff;
   border-radius: 8px;
-  /* 고정 길이 */
-  /* width: 800px; */
-  /* 상대 길이 */
   width: 60%;
 }
 
