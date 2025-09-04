@@ -488,7 +488,7 @@ footer .copyright {
 
 
   .about .inner {
-    padding: 130px 0 150px;
+    padding: 110px 0 150px;
   }
   .about .inner h2::before {
     width: 213px;
@@ -512,7 +512,7 @@ footer .copyright {
   }
 
   .skill .inner {
-    padding: 130px 0 100px;
+    padding: 110px 0 100px;
   }
   .skill .inner h2::before {
     width: 113px;
@@ -532,7 +532,7 @@ footer .copyright {
   }
 
   .project .inner {
-    padding: 130px 0 100px;
+    padding: 115px 0 100px;
   }
   .project .inner h2::before {
     width: 180px;
