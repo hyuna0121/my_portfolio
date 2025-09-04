@@ -41,3 +41,20 @@ modalEl.addEventListener('click', function (e) { // e : 이벤트 발생 시 이
     modalEl.classList.remove('show');
   }
 });
+
+const toTopEl = document.querySelector('#toTop');
+const visualSpanEls = document.querySelectorAll('.visual h1 span');
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY >= 500) {
+    toTopEl.style.opacity = '1';
+    toTopEl.style.transform = 'translateX(0)';
+
+    visualSpanEls.forEach(function (visualSpan) {
+      visualSpan.classList.remove('animate-flash');
+    });
+  } else {
+    toTopEl.style.opacity = '0';
+    toTopEl.style.transform = 'translateX(100px)';
+  }
+});
