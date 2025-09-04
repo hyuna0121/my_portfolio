@@ -456,6 +456,98 @@ footer .copyright {
   padding: 16px;
 }
 
+@media screen and (max-width: 767px) {
+  .inner {
+    width: 80%;
+  }
+
+  header {
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+  header > .inner {
+    width: 100vw;
+    border-radius: 0;
+  }
+
+  .title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .visual > .inner {
+    font-size: 30px;
+  }
+  .visual > .inner .name {
+    top: 45%;
+  }
+  .visual > .inner .dev {
+    top: 55%;
+  }
+
+
+  .about .inner {
+    padding: 130px 0 150px;
+  }
+  .about .inner h2::before {
+    width: 213px;
+  }
+  .about .inner h2::after {
+    width: 213px;
+  }
+  .about .about__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about .about__img {
+    width: 80%;
+    padding: 0 0 40px;
+  }
+  .about .about__info {
+    width: 80%;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: 2s;
+  }
+
+  .skill .inner {
+    padding: 130px 0 100px;
+  }
+  .skill .inner h2::before {
+    width: 113px;
+  }
+  .skill .inner h2::after {
+    width: 113px;
+  }
+  .skill .skill-container {
+    margin-top: 40px;
+    row-gap: 30px;
+  }
+  .skill .skill-container div {
+    transform: skew(0deg) translateY(0) !important;
+  }
+  .skill.show .skill-container div {
+    transform: skew(0deg) translateY(0) !important;
+  }
+
+  .project .inner {
+    padding: 130px 0 100px;
+  }
+  .project .inner h2::before {
+    width: 180px;
+  }
+  .project .inner h2::after {
+    width: 180px;
+  }
+  .project .inner .project-list {
+    row-gap: 30px;
+  }
+  .project .inner .project-container {
+    width: 80%;
+  }
+}
+
 /* Animation */
 @keyframes typingName {
   from { width: 0; }
