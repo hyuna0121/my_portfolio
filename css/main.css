@@ -252,14 +252,15 @@ header .btn-hamburger .material-symbols-outlined {
 
 .skill .skill-container div {
   width: fit-content;
-  background-color: #cad5eb;
+  background-color: #ffffff;
   border: 3px solid #cad5eb;
   border-radius: 15px;
   transition: 0.8s;
   cursor: pointer;
+  box-shadow: 0px 0px 5px #e5e7eb;
 }
 .skill .skill-container div:hover {
-  background-color: #ffffff;
+  background-color: #cad5eb;
   border: 3px solid #e5e7eb;
 }
 
@@ -315,7 +316,6 @@ header .btn-hamburger .material-symbols-outlined {
 }
 
 .project .inner .project-list {
-  /* background-color: #e5e7eb; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -335,10 +335,13 @@ header .btn-hamburger .material-symbols-outlined {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0px 0px 5px rgba(34, 34, 34, 0.4);
+  box-shadow: 0px 0px 5px #97a9e2;
+  background-color: #f7f9ff;
   border-radius: 20px;
   cursor: pointer;
+  /* background-color: #97a9e2; */
 }
+
 
 .project .inner .project-container:hover .project_inner {
   transform: rotateY(180deg);
@@ -355,6 +358,21 @@ header .btn-hamburger .material-symbols-outlined {
 
 .project .inner .project-container .project_inner .project_back {
   transform: rotateY(180deg);
+}
+
+.project .inner .project-container .project_inner .project_front {
+  text-align: left;
+  padding: 20px
+}
+
+.project .inner .project-container .project_inner .project_front h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(34, 34, 34, 0.8);
+}
+
+.project .inner .project-container .project_inner .project_front ul {
+  font-size: 14px;
 }
 
 .project .inner .project-container .project_inner .project_back img {
@@ -435,7 +453,7 @@ footer .copyright {
 #modal .modal-header,
 #imageModal .modal-header {
   padding: 16px;
-  background-color: rgba(34, 34, 34, 0.8);
+  background-color: #97a9e2;
   color: #fff;
   border-radius: 8px 8px 0 0;
   font-weight: 700;
@@ -529,24 +547,24 @@ footer .copyright {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    }
+  }
   .about .about__info ul {
     flex-direction: column;
     align-items: flex-start;
     font-weight: 500;
     padding-bottom: 20px;
-    }
-    .about .about__info ul li span {
-      margin-right: 5px;
-    }
-    .about .about__info ul li:first-child {
-      margin-bottom: 5px;
-      margin-right: 0px;
-      padding: 5px 11px;
-    }
-    .about .about__info ul li:last-child {
-      margin-left: 10px;
-    }
+  }
+  .about .about__info ul li span {
+    margin-right: 5px;
+  }
+  .about .about__info ul li:first-child {
+    margin-bottom: 5px;
+    margin-right: 0px;
+    padding: 5px 11px;
+  }
+  .about .about__info ul li:last-child {
+    margin-left: 10px;
+  }
 
 
   .skill .inner {
