@@ -1,6 +1,6 @@
 const txtWrap = document.querySelector('.typing');
 const txtString = '안녕하세요!\nFULL STACK\nDEVELOPER\n이현아입니다!';
-const txtSpeed = 300;
+const txtSpeed = 200;
 let txtIndex = 0;
 
 function typingEvent() {
