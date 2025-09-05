@@ -1,3 +1,23 @@
+const txtWrap = document.querySelector('.typing');
+const txtString = '안녕하세요!\nFULL STACK\nDEVELOPER\n이현아입니다!';
+const txtSpeed = 300;
+let txtIndex = 0;
+
+function typingEvent() {
+  let txtNow = txtString[txtIndex++];
+  const color = [8, 9, 10, 11, 13, 14, 15, 16, 17, 29, 30, 31];
+  color.forEach(function (el) {
+    if (el === txtIndex) txtNow = `<span style="color: #4a6bd6">${txtNow}</span>`;
+  });
+  txtWrap.innerHTML += txtNow === "\n" ? "<br>" : txtNow;
+  
+  if (txtIndex >= txtString.length) {
+    clearInterval(setTyping); // 타이핑 끝나면 인터벌 멈춤
+  }
+}
+
+let setTyping = setInterval(typingEvent, txtSpeed);
+
 // ScrollMagic 사용
 // 그 외 scrollreveal
 const spyEls = document.querySelectorAll('section.scroll-spy');
@@ -57,4 +77,18 @@ window.addEventListener('scroll', function() {
     toTopEl.style.opacity = '0';
     toTopEl.style.transform = 'translateX(100px)';
   }
+});
+
+const hamburgerBtn = document.querySelector('.btn-hamburger');
+const navEl = document.querySelector('header nav');
+const menuItems = document.querySelectorAll('header nav ul li a');
+
+hamburgerBtn.addEventListener('click', function () {
+  navEl.classList.toggle('active');
+});
+
+menuItems.forEach(function (menuItem) {
+  menuItem.addEventListener('click', function (e) {
+    navEl.classList.remove('active');
+  });
 });

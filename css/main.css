@@ -92,6 +92,15 @@ header > .inner nav ul li:hover a {
   color: rgba(34, 34, 34, 1);
 }
 
+header .btn-hamburger {
+  display: none;
+}
+
+header .btn-hamburger .material-symbols-outlined {
+  font-size: 30px;
+  display: block;
+}
+
 
 /* VISUAL */
 .visual {
@@ -109,25 +118,19 @@ header > .inner nav ul li:hover a {
   position: relative;
 }
 
-.visual > .inner span {
-  white-space: nowrap;
-  position: absolute;
-  overflow: hidden;
-  transform: translate(-50%, -50%);
-  border-right: 3px solid;
-  left: 50%;
-  font-family: "Noto Sans Mono", monospace;
+.typing {
+  margin-top: 200px;
 }
-.visual > .inner .name {
-  color: #4a6bd6;
-  animation: typingName 2s steps(9) forwards, blink .5s step-end forwards;
-  top: 40%;
-}
-.visual > .inner .dev {
-  animation: typingDev 4s steps(20) forwards, blink .5s;
-  animation-delay: 2.2s;
-  top: 60%;
-  opacity: 0;
+
+.typing:after {
+  display: inline-block;
+  margin-left: 2px;
+  vertical-align: middle; 
+  content: '';
+  background: rgba(34, 34, 34, 0.8);
+  width: 2px;
+  height: 75px;
+  animation: blink infinite 1s ease;
 }
 
 
@@ -460,7 +463,7 @@ footer .copyright {
   .inner {
     width: 80%;
   }
-
+  
   header {
     top: 0;
     left: 0;
@@ -469,6 +472,24 @@ footer .copyright {
   header > .inner {
     width: 100vw;
     border-radius: 0;
+    height: 65px;
+  }
+  header > .inner nav {
+    background-color: #97a9e2;
+    color: #fff;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  header > .inner nav.active {
+    height: 100%;
+  }
+  header .btn-hamburger {
+    display: block;
   }
 
   .title {
@@ -479,13 +500,9 @@ footer .copyright {
   .visual > .inner {
     font-size: 30px;
   }
-  .visual > .inner .name {
-    top: 45%;
+  .typing:after {
+    height: 35px;
   }
-  .visual > .inner .dev {
-    top: 55%;
-  }
-
 
   .about .inner {
     padding: 110px 0 150px;
@@ -497,6 +514,7 @@ footer .copyright {
     width: 213px;
   }
   .about .about__wrapper {
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -545,20 +563,11 @@ footer .copyright {
   }
   .project .inner .project-container {
     width: 80%;
+    height: 200px;
   }
 }
 
-/* Animation */
-@keyframes typingName {
-  from { width: 0; }
-  to { width: 9ch; }
-}
-
-@keyframes typingDev {
-  from { width: 0; opacity: 1; }
-  to { width: 20ch; opacity: 1; }
-}
-
 @keyframes blink {
-  50% { border-color: transparent; }
+  0%  {opacity:0;}
+  100%  {opacity:1;}
 }
